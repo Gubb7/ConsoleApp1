@@ -1,22 +1,22 @@
 ﻿public class Balance
 {
-    public int balance_id { get; set; }
-    public int client_id { get; set; }
-    public int balance_amount { get; set; }
+    public int BalanceID { get; set; }
+    public int PersonID { get; set; }
+    public int BalanceAmount { get; set; }
 
-    public Balance(int Balance_id, int Client_id, int Balance_amount)
+    public Balance(int balanceID, int personID, int balanceAmount)
     {
-        balance_id = Balance_id;
-        client_id = Client_id;
-        balance_amount = Balance_amount;
+        BalanceID = balanceID;
+        PersonID = personID;
+        BalanceAmount = balanceAmount;
     }
 
-    public virtual void get_balance()
+    public virtual void GetBalance()
     {
-        Console.WriteLine($"Your balance is: {Balance.balance_amount}");
+        Console.WriteLine($"Your balance is: {Balance.BalanceAmount}");
     }
-    public virtual void update_balance(int amount)
+    public virtual void UpdateBalance(int amount)
     {
-        Balance.balance_amount += amount;
+        Balance.Balance_amount += amount;
     }
 }

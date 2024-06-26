@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Admin : Client
+public class Admin : Person
 {
-    public virtual void add_client(string Name, int Account_number)
+    public virtual void AddClient(string name, int accountNumber)
     {
-        Сlients.Add(new Client(Name, Account_number));
+        Persons.Add(new Client(name, accountNumber));
     }
-    public virtual void remove_client(int ClientID)
+    public virtual void RemoveClient(int personID)
     {
-        Clients[ClientID];
+        Persons[personID];
     }
-    public virtual void view_transactions()
+    public virtual void ViewTransactions()
     {
         foreach(object item in Transactions)
         {
-            Console.WriteLine($"ID: {item.transaction_id} \t amount: {item.amount}\t Time:{item.timestamp}");
+            Console.WriteLine($"ID: {item.TransactionID} \t amount: {item.Amount}\t Time:{item.Timestamp}");
         }
     }
-    public virtual void generate_report()
+    public virtual void GenerateReport()
     {
         Console.WriteLine($"Total amount of transactions: {Transactions.count}");
     }
