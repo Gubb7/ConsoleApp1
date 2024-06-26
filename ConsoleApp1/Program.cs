@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Common;
 
-List<object> Persons = new List<object>();
-List<object> Balances = new List<object>();
-List<object> Transactions = new List<object>();
+var Admins = new List<Admin>();
+var Clients = new List<Client>();
+var Balances = new List<Balance>();
+var Transactions = new List<Transaction>();
